@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="js/rum.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Payflow</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="dash">
+  <aside class="dash__sidebar">
+    <div class="logo-mark"><img src="img/logo.svg" alt="Payflow"></div>
+    <nav class="dash__nav">
+      <a href="dashboard.html" class="active">Transactions</a>
+      <a href="index.html">Back to site</a>
+      <a href="login.html">Sign out</a>
+    </nav>
+  </aside>
+
+  <main class="dash__main">
+    <div class="dash__header">
+      <h1>Transactions</h1>
+    </div>
+
+    <div class="metric-cards" id="metric-cards">
+      <div class="metric-card"><div class="label">Volume (30d)</div><div class="value">—</div></div>
+      <div class="metric-card"><div class="label">Success rate</div><div class="value">—</div></div>
+      <div class="metric-card"><div class="label">Disputes</div><div class="value">—</div></div>
+      <div class="metric-card"><div class="label">Payouts pending</div><div class="value">—</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>Recent activity</h2>
+        <div class="filter-row">
+          <input type="text" id="txn-search" placeholder="Search by customer or ID…">
+          <button class="btn btn--primary" id="txn-search-btn" style="padding:8px 16px;">Search</button>
+        </div>
+      </div>
+      <div id="txn-table-wrap">
+        <div class="dash__loading">Loading transactions…</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

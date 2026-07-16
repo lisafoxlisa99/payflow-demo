@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="js/rum.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign up — Payflow</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="container">
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo.svg" alt="Payflow" height="26"></a>
+    <div class="nav__cta">
+      <span style="font-size:14px;">Already have an account?</span>
+      <a class="btn btn--ghost" href="login.html">Sign in</a>
+    </div>
+  </nav>
+</header>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h1>Create your account</h1>
+    <p class="sub">Start accepting payments in minutes.</p>
+    <div class="form-msg form-msg--ok" id="msg-ok">Account created — redirecting to your dashboard…</div>
+    <div class="form-msg form-msg--err" id="msg-err">Something went wrong. Please try again.</div>
+    <form id="signup-form">
+      <div class="field">
+        <label for="company">Company name</label>
+        <input type="text" id="company" placeholder="Acme Rockets" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@company.com" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn btn--accent btn--block">Create account</button>
+    </form>
+    <div class="auth-foot">By signing up you agree to the Payflow Services Agreement.</div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

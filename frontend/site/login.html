@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="js/rum.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Payflow</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="container">
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo.svg" alt="Payflow" height="26"></a>
+    <div class="nav__cta">
+      <span style="font-size:14px;">New to Payflow?</span>
+      <a class="btn btn--ghost" href="signup.html">Sign up</a>
+    </div>
+  </nav>
+</header>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h1>Sign in</h1>
+    <p class="sub">Welcome back — enter any email and password to view the demo dashboard.</p>
+    <div class="form-msg form-msg--err" id="msg-err">Invalid credentials. Please try again.</div>
+    <form id="login-form">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@company.com" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn btn--accent btn--block">Sign in</button>
+    </form>
+    <div class="auth-foot">Don't have an account? <a href="signup.html" style="color:var(--violet); font-weight:600;">Sign up</a></div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

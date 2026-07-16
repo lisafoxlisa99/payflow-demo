@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="js/rum.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payflow — Payments infrastructure for the internet</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="container">
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo.svg" alt="Payflow" height="26"></a>
+    <div class="nav__links">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#developers">Developers</a>
+      <a href="index.html#customers">Customers</a>
+    </div>
+    <div class="nav__cta">
+      <a class="btn btn--ghost" href="login.html">Sign in</a>
+      <a class="btn btn--primary" href="signup.html">Start now</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <h1>Financial infrastructure to grow your revenue</h1>
+      <p class="lead">Payflow is a unified platform for online payments, billing, and payouts. Accept payments, manage subscriptions, and send money globally — with a handful of API calls.</p>
+      <div class="hero__actions">
+        <a class="btn btn--accent" href="signup.html">Start now</a>
+        <a class="btn btn--ghost" href="index.html#developers">Read the docs →</a>
+      </div>
+      <div class="hero__logos">
+        <span>Northwind Traders</span>
+        <span>Baymark Studio</span>
+        <span>Kettlewell &amp; Co</span>
+        <span>Umber Robotics</span>
+      </div>
+    </div>
+    <div class="code-card">
+      <div class="code-card__dots"><span></span><span></span><span></span></div>
+      <div><span class="cm"># create a payment intent</span></div>
+      <div><span class="fn">payflow</span>.PaymentIntent.<span class="fn">create</span>(</div>
+      <div>&nbsp;&nbsp;amount=<span class="str">2000</span>,</div>
+      <div>&nbsp;&nbsp;currency=<span class="str">"usd"</span>,</div>
+      <div>&nbsp;&nbsp;payment_method_types=[<span class="str">"card"</span>],</div>
+      <div>&nbsp;&nbsp;description=<span class="str">"Order #4471"</span>,</div>
+      <div>)</div>
+      <br>
+      <div><span class="cm"># → 200 OK</span></div>
+      <div>{ <span class="kw">"status"</span>: <span class="str">"succeeded"</span> }</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section--mist">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Products</span>
+      <h2>Everything you need to move money</h2>
+      <p>One integration, every payment flow — from a single checkout to a global payout network.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--violet)">◆</div>
+        <h3>Payments</h3>
+        <p>Accept cards, wallets, and local payment methods in over 40 countries with a single API.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--coral)">▲</div>
+        <h3>Billing</h3>
+        <p>Automate recurring invoices, usage-based pricing, and subscription upgrades without writing billing logic.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--orchid)">●</div>
+        <h3>Payouts</h3>
+        <p>Send funds to sellers, freelancers, and partners worldwide with same-day payout rails.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Estimate your processing fees</h2>
+      <p>Simple, transparent pricing — no setup fees, no monthly minimums.</p>
+    </div>
+    <div class="calc-card">
+      <div class="calc-row">
+        <div class="calc-field">
+          <label for="calc-amount">Transaction amount</label>
+          <input type="number" id="calc-amount" value="100" min="0" step="0.01">
+        </div>
+        <div class="calc-field">
+          <label for="calc-currency">Currency</label>
+          <select id="calc-currency">
+            <option value="usd">USD — US Dollar</option>
+            <option value="eur">EUR — Euro</option>
+            <option value="gbp">GBP — British Pound</option>
+            <option value="jpy">JPY — Japanese Yen</option>
+            <option value="xyz">Other / unlisted currency</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--accent btn--block" id="calc-btn">Calculate fee</button>
+      <div class="calc-result" id="calc-result">
+        Processing fee: <strong id="calc-fee-value">$3.20</strong> (2.9% + $0.30)
+      </div>
+      <div class="calc-error" id="calc-error">Something went wrong estimating that fee. Please try a supported currency.</div>
+    </div>
+  </div>
+</section>
+
+<section id="developers" class="section--mist">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Developers</span>
+      <h2>Built by developers, for developers</h2>
+      <p>Clear docs, predictable APIs, and client libraries for every major language.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--ink)">{ }</div>
+        <h3>RESTful API</h3>
+        <p>Predictable resource-oriented URLs, JSON request/response bodies, and standard HTTP verbs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--ink)">⟳</div>
+        <h3>Webhooks</h3>
+        <p>Get notified in real time when a payment succeeds, a dispute opens, or a payout completes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon" style="background:var(--ink)">▤</div>
+        <h3>Test mode</h3>
+        <p>Simulate any payment scenario in a fully isolated sandbox before going live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="customers">
+  <div class="container">
+    <div class="testimonial">
+      <blockquote>"Payflow let us launch subscriptions in a single sprint. The dashboard alone replaced three internal tools."</blockquote>
+      <cite>— Dana Whitfield, Head of Engineering, Northwind Traders</cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2>Ready to get started?</h2>
+      <p>Create an account and start accepting payments in minutes.</p>
+      <a class="btn btn--primary" href="signup.html">Start now</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <img src="img/logo.svg" alt="Payflow" style="filter:brightness(0) invert(1); width:120px; margin-bottom:12px;">
+        <p>Financial infrastructure for the internet.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Products</h4>
+        <a href="index.html#products">Payments</a>
+        <a href="index.html#products">Billing</a>
+        <a href="index.html#products">Payouts</a>
+      </div>
+      <div class="footer__col">
+        <h4>Developers</h4>
+        <a href="index.html#developers">API reference</a>
+        <a href="index.html#developers">Webhooks</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="index.html#customers">Customers</a>
+        <a href="signup.html">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Account</h4>
+        <a href="login.html">Sign in</a>
+        <a href="signup.html">Sign up</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Payflow, Inc. — a fictional company for demo purposes.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/fee-calculator.js"></script>
+</body>
+</html>
